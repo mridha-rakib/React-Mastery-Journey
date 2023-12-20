@@ -6,16 +6,20 @@ import Counter from "./Components/Counter";
 function App() {
   return (
     <div className="App">
-      <Counter>
-        {(count, incrementCount) => (
+      {/* <Counter
+        render={(isLoggedIn) => (isLoggedIn ? "Rakib Mahmud" : "guest")}
+      /> */}
+
+      <Counter
+        render={(count, incrementCount) => (
           <ClickCounter count={count} incrementCount={incrementCount} />
         )}
-      </Counter>
-      <Counter>
-        {(count, incrementCount) => (
+      />
+      <Counter
+        render={(count, incrementCount) => (
           <HoverCounter count={count} incrementCount={incrementCount} />
         )}
-      </Counter>
+      />
     </div>
   );
 }
